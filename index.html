@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday, Saranya ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #020617;
+      --accent: #f97316;
+      --accent-soft: rgba(249, 115, 22, 0.18);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top, #1d3a5f 0, transparent 55%),
+        radial-gradient(circle at bottom, #3b0764 0, transparent 55%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 620px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(15,23,42,0.9));
+      border-radius: 1.75rem;
+      padding: 2.25rem 2.4rem 2rem;
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.85),
+        0 0 0 1px rgba(148,163,184,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glow {
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(249,115,22,0.12), transparent 60%),
+        radial-gradient(circle at 100% 0, rgba(129,140,248,0.16), transparent 60%);
+      opacity: 0.7;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 1rem;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    h1 span,
+    h2 span {
+      background: linear-gradient(to right, #f97316, #fb7185, #a855f7);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      margin: 0 0 0.75rem;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .accent-text {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .button-row {
+      margin-top: 1.6rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border-radius: 999px;
+      border: none;
+      padding: 0.75rem 1.6rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, #f97316, #fb7185);
+      color: #020617;
+      box-shadow: 0 12px 30px rgba(249,115,22,0.45);
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(249,115,22,0.6);
+    }
+
+    .ghost-btn {
+      background: rgba(15,23,42,0.8);
+      border: 1px solid rgba(148,163,184,0.4);
+      color: var(--text);
+    }
+
+    .ghost-btn:hover {
+      background: rgba(15,23,42,1);
+      transform: translateY(-1px);
+    }
+
+    .screen {
+      display: none;
+      animation: fadeIn 320ms ease-out;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.35);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.3rem;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34,197,94,0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="glow"></div>
+
+      <div class="progress">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-label" id="progressLabel">1 / 7</div>
+      </div>
+
+      <!-- SCREEN 1 -->
+      <section class="screen active">
+        <div class="pill">
+          <div class="pill-dot"></div>
+          FOR MY PRINCESS
+        </div>
+        <h1>Happy Birthday, <span>Saranya</span> 🎂</h1>
+        <p>
+          On <span class="accent-text">21 December 2006</span>, the universe quietly released its softest miracle —
+          wrapped in a girl with a baby voice and a smile warm enough to melt storms.
+        </p>
+        <p class="muted">
+          This little corner of the internet is just for you,
+          from your kuchupuchu to his cutu bhondu larki —  
+          his own Disney princess.
+        </p>
+        <div class="button-row">
+          <button class="primary-btn js-next">Enter the Experience</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 2 -->
+      <section class="screen">
+        <div class="pill">
+          <div class="pill-dot"></div>
+          HOW I SEE YOU
+        </div>
+        <h2>The world is softer because of <span>you</span>.</h2>
+        <p>
+          You’re the most innocent soul I’ve ever known —  
+          the kind of purity people write poems about but never actually see in real life.
+        </p>
+        <p class="muted">
+          Your baby voice calms my chaos.  
+          Your smile flips my whole day.  
+          We fight, we break, we rebuild —  
+          but we never disrespect, never forget “us.”
+        </p>
+        <div class="button-row">
+          <button class="ghost-btn js-back">Back</button>
+          <button class="primary-btn js-next">Next</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 3 -->
+      <section class="screen">
+        <div class="pill">
+          <div class="pill-dot"></div>
+          MY OBSESSIONS
+        </div>
+        <h2>10 things I adore about you 💫</h2>
+        <ul class="list">
+          <li>1. The sparkle in your eyes when you get excited.</li>
+          <li>2. Your baby voice that melts my anger like butter on hot paratha.</li>
+          <li>3. The way you say my name like it belongs only to you.</li>
+          <li>4. Your innocence — real, effortless, rare.</li>
+          <li>5. How you argue like a princess but protect like a queen.</li>
+          <li>6. Your perfectly timed “I love you” texts.</li>
+          <li>7. You calling me your <span class="accent-text">kuchupuchu</span>.</li>
+          <li>8. How you choose me even when I act stupid.</li>
+          <li>9. Your smile — less feature, more miracle.</li>
+          <li>10. You. Just you. My Saranya.</li>
+        </ul>
+        <div class="button-row">
+          <button class="ghost-btn js-back">Back</button>
+          <button class="primary-btn js-next">Continue</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 4 -->
+      <section class="screen">
+        <div class="pill">
+          <div class="pill-dot"></div>
+          OUR TIMELINE
+        </div>
+        <h2>The day the universe got its princess ✨</h2>
+        <p>
+          On <span class="accent-text">21 December 2006</span>, a soft storm was born —  
+          they named her <span class="accent-text">Saranya</span>.
+        </p>
+        <p>
+          Much later, somewhere between our calls, texts, overthinking and laughter,  
+          we quietly became “us”.
+        </p>
+        <div class="counter-row">
+          <div class="counter">
+            <div class="counter-number" id="daysCount">000</div>
+            <div class="counter-label">Days of us</div>
+          </div>
+          <div class="counter">
+            <div class="counter-number">∞</div>
+            <div class="counter-label">Reasons to love you</div>
+          </div>
+        </div>
+        <p class="muted">
+          Whatever future waits for us,  
+          I know it feels brighter with you in it.
+        </p>
+        <div class="button-row">
+          <button class="ghost-btn js-back">Back</button>
+          <button class="primary-btn js-next">Next</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 5 -->
+      <section class="screen">
+        <div class="pill">
+          <div class="pill-dot"></div>
+          LETTER FOR YOU
+        </div>
+        <h2>A small letter for you, Saranya 📝</h2>
+        <p>
+          Before you, love was just a word.  
+          With you, it feels like a home —  
+          a place where my overthinking finally sits down and breathes.
+        </p>
+        <p>
+          You are softness and storm,  
+          innocence and strength,  
+          baby voice and big heart.
+        </p>
+        <p>
+          We fight, we cry, we act dramatic —  
+          but we never let go of each other.  
+          That’s our magic.
+        </p>
+        <p class="muted">
+          Thank you for loving me the way you do.  
+          Thank you for calling me your kuchupuchu.  
+          Thank you for letting this bhondu larka love you. ❤️
+        </p>
+        <div class="button-row">
+          <button class="ghost-btn js-back">Back</button>
+          <button class="primary-btn js-next">A special gift?</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 6 -->
+      <section class="screen">
+        <div class="pill">
+          <div class="pill-dot"></div>
+          SECRET LEVEL
+        </div>
+        <h2>There’s a gift waiting 🎁</h2>
+        <p>
+          Unlock it with the magic sentence.
+        </p>
+
+        <div class="input-row">
+          <p class="hint">
+            Type exactly: <span class="accent-text">I love you, my kuchupuchu</span>
+          </p>
+          <input id="magicInput" type="text" placeholder="Type the magic sentence..." />
+          <button class="primary-btn" id="unlockBtn">Unlock Gift</button>
+          <div class="error" id="errorMsg" style="display:none;">Not correct yet, princess 😌</div>
+        </div>
+
+        <div class="success-box" id="giftBox" style="display:none;">
+          <strong>Your gift is unlocked:</strong>
+          <p>
+            One full day  
+            entirely yours —  
+            no distractions,  
+            no excuses,  
+            just  
+            you + me + our tiny universe.  
+            This is your <span class="accent-text">kuchupuchu pass</span>. 🫶
+          </p>
+        </div>
+
+        <div class="button-row">
+          <button class="ghost-btn js-back">Back</button>
+          <button class="primary-btn js-next">Skip to ending</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 7 -->
+      <section class="screen">
+        <div class="pill">
+          <div class="pill-dot"></div>
+          FOREVER FOR YOU
+        </div>
+        <h2>Happy Birthday, my Disney princess ❤️</h2>
+        <p>
+          Words fall short when I try to describe you.  
+          So here’s just the truth:
+        </p>
+        <p>
+          <span class="accent-text">
+            You’re not just my girlfriend.  
+            You’re my softness, my peace,  
+            my favorite madness  
+            and the safest home I’ve ever known.
+          </span>
+        </p>
+        <p class="muted">
+          We’ll fight, we’ll laugh, we’ll grow —  
+          but as long as the day ends with us choosing each other again,  
+          I’m ready for every twist in our story.
+        </p>
+        <p class="muted">
+          – With love,  
+          your bhondu larka, your kuchupuchu.
+        </p>
+        <div class="button-row">
+          <button class="primary-btn js-back">Read again</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+<script>
+  // Screen switching
+  const screens = document.querySelectorAll(".screen");
+  const nextButtons = document.querySelectorAll(".js-next");
+  const backButtons = document.querySelectorAll(".js-back");
+  const progressFill = document.getElementById("progressFill");
+  const progressLabel = document.getElementById("progressLabel");
+
+  let currentIndex = 0;
+
+  function updateScreen(index) {
+    currentIndex = index;
+    screens.forEach((screen, i) => {
+      screen.classList.toggle("active", i === currentIndex);
+    });
+    const total = screens.length;
+    const percent = ((currentIndex + 1) / total) * 100;
+    progressFill.style.width = percent + "%";
+    progressLabel.textContent = (currentIndex + 1) + " / " + total;
+  }
+
+  nextButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      updateScreen(Math.min(currentIndex + 1, screens.length - 1));
+    });
+  });
+
+  backButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      updateScreen(Math.max(currentIndex - 1, 0));
+    });
+  });
+
+  // Days counter – change to your real “start date”
+  const startDate = new Date("2024-07-01"); 
+  const today = new Date();
+  const diffTime = today - startDate;
+  const diffDays = Math.max(0, Math.floor(diffTime / (1000 * 60 * 60 * 24)));
+  document.getElementById("daysCount").textContent = String(diffDays).padStart(3, "0");
+
+  // Secret unlock
+  const magicInput = document.getElementById("magicInput");
+  const unlockBtn = document.getElementById("unlockBtn");
+  const errorMsg = document.getElementById("errorMsg");
+  const giftBox = document.getElementById("giftBox");
+
+  unlockBtn.addEventListener("click", () => {
+    const value = (magicInput.value || "").trim();
+    const correct = "I love you, my kuchupuchu";
+    if (value === correct) {
+      giftBox.style.display = "block";
+      errorMsg.style.display = "none";
+    } else {
+      giftBox.style.display = "none";
+      errorMsg.style.display = "block";
+    }
+  });
+</script>
+
+</body>
+</html>
